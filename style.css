@@ -1,0 +1,141 @@
+/* ===== FOOTER — mobile first ===== */
+
+footer {
+  background-color: #38040E;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Tous les sélecteurs commencent par "footer" pour ne pas toucher au reste du site */
+footer section {
+  background-color: #38040E;
+  color: #fff;
+  display: flex;
+  flex-direction: column;      /* mobile : tout est empilé */
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+footer .footer-content {
+  border-bottom: 1px solid #DCC8A9;
+  margin-bottom: 20px;
+}
+
+footer div {
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;            /* enlève les puces */
+  margin: 0;
+  padding: 0;
+}
+
+footer div h4 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-family: 'Oranienbaum', Cormorant, serif;
+  color: #DCC8A9;
+}
+
+footer div a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+footer div a:hover {
+  color: #DCC8A9;
+}
+
+footer div h3 {
+  color: #fff;
+  font-size: 27px;
+  margin: 0 0 10px;
+  font-family: 'Oranienbaum', Cormorant, serif;
+  font-weight: 400;
+  display: flex;               /* aligne AUTUMN, l'infini et CLOUD sur une ligne */
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* Le petit signe infini entre AUTUMN et CLOUD */
+footer .infini {
+  height: 1.6em;               /* suit la taille du texte */
+  width: auto;
+  filter: brightness(0) invert(1);   /* passe le S en blanc */
+}
+
+/* Icône Instagram dans un cercle */
+footer .section-4 {
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .social {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0;
+}
+
+footer .social:hover {
+  border-color: #DCC8A9;
+}
+
+footer .copyright p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* ===== Tablette : à partir de 600px ===== */
+@media (min-width: 600px) {
+  footer .footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  footer .section-1 {
+    flex-basis: 100%;          /* le nom prend toute la ligne */
+    align-items: center;
+  }
+
+  footer .copyright {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== Ordinateur : à partir de 992px ===== */
+@media (min-width: 992px) {
+  footer {
+    padding: 40px 60px 20px;
+  }
+
+  footer .footer-content {
+    flex-wrap: nowrap;
+  }
+
+  footer .section-1 {
+    flex-basis: auto;
+    align-items: flex-start;
+  }
+
+  footer div h3 {
+    font-size: 32px;
+  }
+}
